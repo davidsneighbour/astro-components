@@ -1,23 +1,35 @@
 {
-	"editor.formatOnSave": true,
-	"workbench.colorCustomizations": {
-		"activityBar.activeBackground": "#a3791e",
-		"activityBar.background": "#a3791e",
-		"activityBar.foreground": "#e7e7e7",
-		"activityBar.inactiveForeground": "#e7e7e799",
-		"activityBarBadge.background": "#28d7a0",
-		"activityBarBadge.foreground": "#15202b",
-		"commandCenter.border": "#e7e7e799",
-		"sash.hoverBorder": "#a3791e",
-		"statusBar.background": "#785916",
-		"statusBar.foreground": "#e7e7e7",
-		"statusBarItem.hoverBackground": "#a3791e",
-		"statusBarItem.remoteBackground": "#785916",
-		"statusBarItem.remoteForeground": "#e7e7e7",
-		"titleBar.activeBackground": "#785916",
-		"titleBar.activeForeground": "#e7e7e7",
-		"titleBar.inactiveBackground": "#78591699",
-		"titleBar.inactiveForeground": "#e7e7e799"
-	},
-	"peacock.color": "#785916"
+  "editor.formatOnSave": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#a3791e",
+    "activityBar.background": "#a3791e",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#28d7a0",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#a3791e",
+    "statusBar.background": "#785916",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#a3791e",
+    "statusBarItem.remoteBackground": "#785916",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#785916",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#78591699",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#785916",
+  // file nesting setup
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.astro": "$(capture).test.ts",
+    ".env": ".env*",
+    "package.json": ".lychee*, .commitlint*, .editorconfig*, .fixpack*, .gitignore, .lintstaged*, .nvm*, .stylelint*, biome*, eslint*, netlify*, prettier*, package*, .versionrc*, .ls-lint.*, frontmatter.json",
+    "shared-config.ts": "shared-config*",
+    "*.json": "$(capture).schema.json,$(capture).test.ts",
+    "README.md": "AGENT.md",
+    "playwright.config.ts": "playwright.*.ts"
+  },
 }

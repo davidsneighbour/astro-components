@@ -1,0 +1,188 @@
+---
+// @see https://css-tricks.com/pure-css-tabs-with-details-grid-and-subgrid/#comment-1883494
+// @see https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+---
+
+<div class="grid">
+  <details name="alpha" style="--n: 1" open>
+    <summary>Recent Tracks</summary>
+    <div>
+      <p>Your recent tracks:</p>
+      <ul>
+        <li>The Beths - Mother, Pray For Me</li>
+        <li>The Beths - Metal</li>
+        <li>The Beths - No Joy</li>
+        <li>The Beths - Mosquitoes</li>
+        <li>The Beths - Straight Line Was A Lie</li>
+      </ul>
+    </div>
+  </details>
+  <details name="alpha" style="--n: 2">
+    <summary>Loved tracks</summary>
+    <div>
+      <p>Tracks you loved:</p>
+      <ul>
+        <li>Marnie Stern - Believing Is Seeing</li>
+        <li>FKA twigs - Girl Feels Good</li>
+        <li>Fat Dog - Running</li>
+        <li>Parquet Courts - Tenderness</li>
+        <li>Sufjan Stevens - Will Anybody Ever Love Me?</li>
+      </ul>
+    </div>
+  </details>
+  <details name="alpha" style="--n: 3">
+    <summary>Following</summary>
+    <div>
+      <p>Artists you follow:</p>
+      <ul>
+        <li>Amyl and the Sniffers</li>
+        <li>Du Blonde</li>
+        <li>Magdalena Bay</li>
+        <li>Flying Lotus</li>
+        <li>Horsegirl</li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+<hr />
+
+<div class="grid">
+  <details name="beta" style="--n: 1" open>
+    <summary><span class="summary">Recent Tracks</span></summary>
+    <div>
+      <p>Your recent tracks:</p>
+      <ul>
+        <li>The Beths - Mother, Pray For Me</li>
+        <li>The Beths - Metal</li>
+        <li>The Beths - No Joy</li>
+        <li>The Beths - Mosquitoes</li>
+        <li>The Beths - Straight Line Was A Lie</li>
+      </ul>
+    </div>
+  </details>
+  <details name="beta" style="--n: 2">
+    <summary><span class="summary">Loved tracks</span></summary>
+    <div>
+      <p>Tracks you loved:</p>
+      <ul>
+        <li>Marnie Stern - Believing Is Seeing</li>
+        <li>FKA twigs - Girl Feels Good</li>
+        <li>Fat Dog - Running</li>
+        <li>Parquet Courts - Tenderness</li>
+        <li>Sufjan Stevens - Will Anybody Ever Love Me?</li>
+      </ul>
+    </div>
+  </details>
+  <details name="beta" style="--n: 3">
+    <summary><span class="summary">Following</span></summary>
+    <div>
+      <p>Artists you follow:</p>
+      <ul>
+        <li>Amyl and the Sniffers</li>
+        <li>Du Blonde</li>
+        <li>Magdalena Bay</li>
+        <li>Flying Lotus</li>
+        <li>Horsegirl</li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+<hr />
+
+<div class="grid">
+  <details name="gamma" style="--n: 1" open>
+    <summary><span class="summary">Recent Tracks</span></summary>
+    <div>
+      <p>Your recent tracks:</p>
+      <ul>
+        <li>The Beths - Mother, Pray For Me</li>
+        <li>The Beths - Metal</li>
+        <li>The Beths - No Joy</li>
+        <li>The Beths - Mosquitoes</li>
+        <li>The Beths - Straight Line Was A Lie</li>
+      </ul>
+    </div>
+  </details>
+  <details name="gamma" style="--n: 2">
+    <summary><span class="summary">Loved tracks</span></summary>
+    <div>
+      <p>Tracks you loved:</p>
+      <ul>
+        <li>Marnie Stern - Believing Is Seeing</li>
+        <li>FKA twigs - Girl Feels Good</li>
+        <li>Fat Dog - Running</li>
+        <li>Parquet Courts - Tenderness</li>
+        <li>Sufjan Stevens - Will Anybody Ever Love Me?</li>
+      </ul>
+    </div>
+  </details>
+  <details name="gamma" style="--n: 3">
+    <summary><span class="summary">Following</span></summary>
+    <div>
+      <p>Artists you follow:</p>
+      <ul>
+        <li>Amyl and the Sniffers</li>
+        <li>Du Blonde</li>
+        <li>Magdalena Bay</li>
+        <li>Flying Lotus</li>
+        <li>Horsegirl</li>
+      </ul>
+    </div>
+  </details>
+</div>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: auto 1fr;
+    column-gap: 1rem;
+  }
+
+  details {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 2;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+  }
+
+  summary {
+    grid-column: var(--n) / span 1;
+    grid-row: 1;
+    display: grid;
+    padding: 1rem;
+    border-bottom: 2px solid dodgerblue;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  details[open] :is(summary, .summary) {
+    font-weight: bold;
+  }
+
+  details::details-content {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    padding: 1rem;
+    border-bottom: 2px solid dodgerblue;
+  }
+
+  details:not([open])::details-content {
+    display: none;
+  }
+
+  @media screen and (width < 40em) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      column-gap: 0.5rem;
+    }
+
+    summary,
+    details::details-content {
+      padding: 0.5rem;
+    }
+  }
+</style>

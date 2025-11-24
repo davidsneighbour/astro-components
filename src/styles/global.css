@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-50: oklch(0.9425 0.0278 76.1978);
+  --color-brand-100: oklch(0.8869 0.0545 77.9170);
+  --color-brand-200: oklch(0.8281 0.0781 77.9304);
+  --color-brand-300: oklch(0.7719 0.0990 80.1021);
+  --color-brand-400: oklch(0.7150 0.1176 81.5334);
+  --color-brand-500: oklch(0.6575 0.1305 81.8179);
+  --color-brand-600: oklch(0.5709 0.1102 81.7068);
+  --color-brand-700: oklch(0.4842 0.0901 82.0218);
+  --color-brand-800: oklch(0.3984 0.0691 81.4240);
+  --color-brand-900: oklch(0.3115 0.0477 81.0524);
+  --color-brand-950: oklch(0.2232 0.0288 82.0775);
+  /* fallbacks for older uses */
+  --color-brand-rgb-50: rgb(247, 234, 216);
+  --color-brand-rgb-100: rgb(238, 214, 178);
+  --color-brand-rgb-200: rgb(227, 193, 141);
+  --color-brand-rgb-300: rgb(214, 174, 105);
+  --color-brand-rgb-400: rgb(200, 155, 67);
+  --color-brand-rgb-500: rgb(185, 136, 21);
+  --color-brand-rgb-600: rgb(152, 112, 23);
+  --color-brand-rgb-700: rgb(120, 89, 22);
+  --color-brand-rgb-800: rgb(90, 67, 21);
+  --color-brand-rgb-900: rgb(61, 46, 18);
+  --color-brand-rgb-950: rgb(34, 26, 11);
+  /* hex values */
+  --color-brand-hex-50: #f7ead8;
+  --color-brand-hex-100: #eed6b2;
+  --color-brand-hex-200: #e3c18d;
+  --color-brand-hex-300: #d6ae69;
+  --color-brand-hex-400: #c89b43;
+  --color-brand-hex-500: #b98815;
+  --color-brand-hex-600: #987017;
+  --color-brand-hex-700: #785916;
+  --color-brand-hex-800: #5a4315;
+  --color-brand-hex-900: #3d2e12;
+  --color-brand-hex-950: #221a0b;
+}

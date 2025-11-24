@@ -1,16 +1,53 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import favicon from "../assets/images/favicon.svg";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href={favicon.src} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="bg-brand-950 text-brand-50">
+    <h1>Astro</h1>
+
+    <div class="min-h-screen w-full relative">
+      Crimson Depth
+      <div
+        class="absolute inset-0 z-0"
+        style="height:400px;background: radial-gradient(125% 125% at 50% 100%, #000000 40%, #2b0707 100%)"
+      >
+      </div>
+    </div>
+
+    <div class="min-h-screen w-full relative">
+      Emerald Void
+      <div
+        class="absolute inset-0 z-0"
+        style="height:400px;background: radial-gradient(125% 125% at 50% 90%, #000000 40%, #072607 100%)"
+      >
+      </div>
+    </div>
+
+    <div class="min-h-screen w-full relative">
+      Dark Horizon Glow
+      <div
+        class="absolute inset-0 z-0"
+        style="height:400px;background: radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)"
+      >
+      </div>
+    </div>
+
+    <div class="min-h-screen w-full relative">
+      Crimson Depth
+      <div
+        class="absolute inset-0 z-0"
+        style="height:400px;background: radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b0707 100%)"
+      >
+      </div>
+    </div>
+  </body>
 </html>
